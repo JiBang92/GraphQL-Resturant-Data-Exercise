@@ -1,12 +1,23 @@
-# **_<span style="color: #ff5733">GraphQL Restaurant Data Exercise</span>_**
+<h1 style="color: #ff5733; text-align: center">GraphQL Restaurant Data Exercise</h1>
 
-<img href="./images/Node_Logo.png" alt="Node Logo"/>
-<img href="./images/Express_Logo.png" alt="Express Logo"/>
-<img href="./images/GraphQL_Logo.png" alt="GraphQL Logo"/>
+<div style="margin: auto; text-align: center">
+  <img src="./images/Node_Logo.png" alt="Node Logo" width="105" style="margin: auto"/>
+  <img src="./images/Express_Logo.png" alt="Express Logo" width="187.5" style="margin: auto"/>
+  <img src="./images/GraphQL_Logo.png" alt="GraphQL Logo" width="122.5" style="margin: auto"/>
+</div>
 
-## **_<span style="color: yellowgreen">Setup</span>_**
+<br/>
+<br/>
+<br/>
 
-### 1. **_index.js_** file should contain:
+<div style="margin: auto; width: 50%">
+
+<h2 style="color: yellowgreen; text-align: center; font-weight: bold">Setup</h2>
+
+<hr />
+<br/>
+
+<h3 style="text-align: center">1. <b>index.js</b> file should contain: </h3>
 
 ```js
 var { graphqlHTTP } = require("express-graphql");
@@ -72,6 +83,7 @@ var restaurants = [
     ],
   },
 ];
+
 var schema = buildSchema(`
 type Query{
   restaurant(id: Int): restaurant
@@ -119,7 +131,9 @@ var root = {
     // Your code goes here
   },
 };
+
 var app = express();
+
 app.use(
   "/graphql",
   graphqlHTTP({
@@ -128,15 +142,18 @@ app.use(
     graphiql: true,
   })
 );
-var port = 5500;
-app.listen(5500, () => console.log("Running Graphql on Port:" + port));
 
-export default root;
+var port = 5500;
+
+app.listen(5500, () => console.log("Running Graphql on Port:" + port));
 ```
 
 <br/>
 
-### 2. **_package.json_** file should contain:
+<h3 style="text-align: center">2. <b>package.json</b> file should contain:</h3>
+
+<hr/>
+<br/>
 
 ```json
 {
@@ -159,7 +176,10 @@ export default root;
 
 <br/>
 
-### 3. Install dependencies:
+<h3 style="text-align: center">3. Install dependencies:</h3>
+
+<hr/>
+<br/>
 
 ```bash
 npm install
@@ -172,7 +192,10 @@ npm install express express-graphql graphql --save
 
 <br/>
 
-### 4. Start the server at **_[localhost:5500/graphql](localhost:5500/graphql)_**
+<h3 style="text-align: center">4. Start the server at <b><a href="localhost:5500/graphql">localhost:5500/graphql</a></b></h3>
+
+<hr/>
+<br/>
 
 > NOTE: At this point, if you were to test any queries, you would receive **_null_** data because **_root_** hasn't been defined:
 >
@@ -198,7 +221,10 @@ npm install express express-graphql graphql --save
 
 <br/>
 
-### 5. Define **_root_**
+<h3 style="text-align: center">5. Define <b>root</b></h3>
+
+<hr/>
+<br/>
 
 ```js
 var root = {
@@ -253,7 +279,10 @@ var root = {
 
 <br/>
 
-### 6. Restart The Server And Test Your Queries
+<h3 style="text-align: center">6. Restart The Server And Test Your Queries</h3>
+
+<hr/>
+<br/>
 
 First, we will be setting up an **_$iid_** variable so we don't have to create new queries for each restaurant.
 
@@ -355,25 +384,30 @@ mutation editRestaurants ($iid: Int = 1, $name: String = "New Restaurant Name") 
 
 > See the results [here](#editRestaurant)
 
+<hr/>
 <br/>
 
-### Now we have full control over the data. To review, here are the things we covered:
+<h3 style="text-align: center">Now we have full control over the data. To review, here are the things we covered:</h3>
 
-- Setup project directory and install dependencies
-- Define **_root_**
-- Learn how to manipulate data using <span style="font-size: 18px; font-weight: bold">C</span>reate <span style="font-size: 18px; font-weight: bold">R</span>ead <span style="font-size: 18px; font-weight: bold">U</span>pdate <span style="font-size: 18px; font-weight: bold">D</span>elete:
-  - Retrieving a specific restaurant (Read)
-  - Retrieving all restaurants (Read)
-  - Creating and submitting a new restaurant (Create)
-  - Deleting a restaurant by id (Delete)
-  - Editing a restaurant's name and description (Update)
+<br/>
+<ul style="margin: auto; width: 50%; text-align: left">
+  <li> Setup project directory and install dependencies</li>
+<li>Define <b>root</b></li>
+<li>Learn how to manipulate data using <span style="color: yellowgreen; font-size: 18px; font-weight: bold">C</span>reate <span style="color: yellowgreen; font-size: 18px; font-weight: bold">R</span>ead <span style="color: yellowgreen; font-size: 18px; font-weight: bold">U</span>pdate <span style="color: yellowgreen; font-size: 18px; font-weight: bold">D</span>elete:</li>
+  <ul>
+    <li>Retrieving a specific restaurant (Read)</li>
+    <li>Retrieving all restaurants (Read)</li>
+    <li>Creating and submitting a new restaurant (Create)</li>
+    <li>Deleting a restaurant by id (Delete)</li>
+    <li>Editing a restaurant's name and description (Update)</li>
+  </ul>
+</ul>
 
 <br/>
 <br/>
+<hr/>
 
 > Link to [Github]().
-
-<hr/>
 
 <br/>
 <br/>
@@ -538,3 +572,5 @@ mutation editRestaurants ($iid: Int = 1, $name: String = "New Restaurant Name") 
 ```
 
 <span>[Go Back](#top)</span>
+
+</div>
