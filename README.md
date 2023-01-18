@@ -1,9 +1,9 @@
 <h1 style="color: #ff5733; text-align: center">GraphQL Restaurant Data Exercise</h1>
 
 <div style="margin: auto; text-align: center">
-  <img src="./images/Node_Logo.png" alt="Node Logo" width="105" style="margin: auto"/>
-  <img src="./images/Express_Logo.png" alt="Express Logo" width="187.5" style="margin: auto"/>
-  <img src="./images/GraphQL_Logo.png" alt="GraphQL Logo" width="122.5" style="margin: auto"/>
+  <img src="./images/Node_Logo.png" alt="Node Logo" width="150" style="margin: auto"/>
+  <img src="./images/Express_Logo.png" alt="Express Logo" width="267" style="margin: auto"/>
+  <img src="./images/GraphQL_Logo.png" alt="GraphQL Logo" width="175" style="margin: auto"/>
 </div>
 
 <br/>
@@ -406,16 +406,14 @@ mutation editRestaurants ($iid: Int = 1, $name: String = "New Restaurant Name") 
 <br/>
 <br/>
 <hr/>
-
-> Link to [Github]().
-
+<br/>
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
 
-## **_<span style="color: yellowgreen">Query Results</span>_**
+<h2 style="color: yellowgreen; text-align: center; font-weight: bold">Query Results</h2>
 
 <hr/>
 <br/>
